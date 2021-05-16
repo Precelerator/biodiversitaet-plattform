@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return <Component {...pageProps} />;
 }
 
-export default MyApp
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  const pageProps = Component.getInitialProps ? await Component.getInitialProps(ctx) : {};
+  if (Object.keys(pageProps).length > 0) {
+    return { pageProps };
+  } else {
+    return {};
+  }
+};
+
+export default MyApp;
