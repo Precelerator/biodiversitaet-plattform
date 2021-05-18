@@ -1,7 +1,5 @@
 import Head from "next/head";
-import Hero from "../sections/hero";
-import Projects from "../sections/projects";
-import Contact from "../sections/contact";
+import { Header, Hero, Projects, Contact, Footer } from "../sections/index";
 
 export default function Home({ projects }) {
   return (
@@ -15,10 +13,12 @@ export default function Home({ projects }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
+      <main style={{ scrollBehavior: "smooth" }}>
+        <Header></Header>
         <Hero></Hero>
         <Projects projects={projects}></Projects>
         <Contact></Contact>
+        <Footer></Footer>
       </main>
     </>
   );

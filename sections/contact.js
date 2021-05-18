@@ -9,7 +9,7 @@ export default function Contact() {
   const [agreed, setAgreed] = useState(false);
 
   return (
-    <div className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-12">
+    <section className="bg-white py-16 px-4 overflow-hidden sm:px-6 lg:px-8 lg:py-12" id="contact">
       <div className="relative max-w-xl mx-auto">
         <svg
           className="absolute left-full transform translate-x-1/2"
@@ -140,13 +140,10 @@ export default function Contact() {
                 </div>
                 <div className="ml-3">
                   <p className="text-base text-gray-500">
-                    By selecting this, you agree to the{" "}
-                    <a href="#" className="font-medium text-gray-700 underline">
-                      Privacy Policy
-                    </a>{" "}
-                    and{" "}
-                    <a href="#" className="font-medium text-gray-700 underline">
-                      Cookie Policy
+                    Durch Absenden dieses Formulars stimme ich zu, dass SAVEDiversity meine Daten im Rahmen dieser
+                    Anfragen verarbeiten darf. Lies{" "}
+                    <a href="/impressum" className="font-medium text-gray-700 underline">
+                      unsere Datenschutzerklärung
                     </a>
                     .
                   </p>
@@ -164,6 +161,6 @@ export default function Contact() {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
