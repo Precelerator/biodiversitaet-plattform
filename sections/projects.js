@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function Projects({ projects }) {
   const [selectedCountry, setSelectedCountry] = useState("");
-  const [selectedPlatform, setSelectedPlatform] = useState("");
   const changeSelect = (event) => {
     setSelectedCountry(event.target.value);
   };
@@ -27,6 +26,7 @@ export default function Projects({ projects }) {
         >
           <option value="">Alle Länder</option>
           {[...new Set(projects.map((p) => p.country))]
+            .filter((c) => c.length > 0)
             .sort((a, b) => a.localeCompare(b))
             .map((c, index) => (
               <option key={index}>{c}</option>
