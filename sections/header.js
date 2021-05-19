@@ -7,7 +7,7 @@ export default function Header() {
             <a href="/" className="flex items-center">
               <span className="sr-only">Biodiversitätsplattform</span>
               <img
-                className="h-10 w-auto"
+                className="sm:h-6 h-10 w-auto"
                 src="https://tailwindui.com/img/logos/workflow-mark.svg?color=white"
                 alt=""
               />
