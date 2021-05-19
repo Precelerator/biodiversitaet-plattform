@@ -57,10 +57,17 @@ export default function Contact() {
         </svg>
         <div className="text-center">
           <h2 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl">Kontakt</h2>
-          <p className="mt-4 text-lg leading-6 text-gray-500">Du willst x oder y? Tritt mit uns in Kontakt!</p>
+          <p className="mt-4 text-lg leading-6 text-gray-500">
+            Du willst mehr erfahren oder mit deinem Projekt auf unserer Plattform gefeatured werden? Tritt mit uns in
+            Kontakt!
+          </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form
+            action="https://formspree.io/f/xeqvanoa"
+            method="POST"
+            className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8"
+          >
             <div>
               <label htmlFor="first_name" className="block text-sm font-medium text-gray-700">
                 Vorname
@@ -98,6 +105,7 @@ export default function Contact() {
                   id="email"
                   name="email"
                   type="email"
+                  required
                   autoComplete="email"
                   className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                 />
@@ -111,6 +119,7 @@ export default function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  required
                   rows={4}
                   className="py-3 px-4 block w-full shadow-sm focus:ring-green-500 focus:border-green-500 border-gray-300 rounded-md"
                   defaultValue={""}
@@ -123,6 +132,7 @@ export default function Contact() {
                   <Switch
                     checked={agreed}
                     onChange={setAgreed}
+                    required
                     className={classNames(
                       agreed ? "bg-green-600" : "bg-gray-200",
                       "relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500"
