@@ -11,6 +11,8 @@ export function parseBetterPlace(betterplaceJson) {
       href: project.links[0].href,
       city: project.city ?? "",
       country: project.country ?? "",
+      lon: project.longitude ?? "",
+      lat: project.latitude ?? "",
       amount_donated: (project.donated_amount_in_cents / 100).toFixed(2),
       amount_goal: ((project.donated_amount_in_cents + project.open_amount_in_cents) / 100).toFixed(2) + " €",
       progress_percentage: project.progress_percentage,

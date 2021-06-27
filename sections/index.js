@@ -3,5 +3,6 @@ import Hero from "./hero";
 import Projects from "./projects";
 import Contact from "./contact";
 import Footer from "./footer";
+import Learning from "./learning";
 
-export { Header, Hero, Projects, Contact, Footer };
+export { Header, Hero, Learning, Projects, Contact, Footer };
