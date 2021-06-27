@@ -25,6 +25,11 @@ const Map = ({ projects }) => {
                       <div className="p-4">
                         <h3 className="text-sm font-medium text-gray-900">{project.title}</h3>
                       </div>
+                      <div className="p-3">
+                            <span className="px-2 py-1 text-xs font-medium text-green-800 bg-green-100 rounded-full">
+                              {project.platform ? project.platform : "EcoCrowd"}
+                            </span>
+                      </div>
                     </div>
                   </div>
                 </a>
