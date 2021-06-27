@@ -7,7 +7,7 @@ const Map = ({ projects }) => {
   return (
     <div className="h-96">
       <h1>{projects[0].country}</h1>
-      <MapContainer center={[48.8351, 11.582]} zoom={7} style={{ height: "100%", width: "100%" }}>
+      <MapContainer center={[48.8351, 11.582]} zoom={7} scrollWheelZoom={false} style={{ height: "100%", width: "100%" }}>
         <TileLayer
           url={`https://api.mapbox.com/styles/v1/fabiomai/ckq9jqqdq1byp18n328sswd7b/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZmFiaW9tYWkiLCJhIjoiY2txM3FzYmNyMTE2OTJucXJqdmxmMmVyaSJ9.KWn0fAq1DZ2dlWRdz-t7eg`}
           attribution='Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery &copy; <a href="https://www.mapbox.com/">Mapbox</a>'
@@ -16,7 +16,7 @@ const Map = ({ projects }) => {
           //   let longLat = lookUpLongLat(project.city, project.country);
           if (project.lon == "" || project.lat == "") return;
           return (
-            <Marker key={index} position={[project.lat, project.lon]} draggable={true} animate={true}>
+            <Marker key={index} position={[project.lat, project.lon]} draggable={false} animate={true}>
               <Popup>
                 <a href={project.href} className="cursor-pointer" key={project.href} target="_blank">
                   <div className="flex flex-col h-full col-span-1 text-center bg-white divide-y divide-gray-200 rounded-lg shadow">
